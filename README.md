@@ -1,24 +1,43 @@
-# README
+Furima h1
+ライフコーチが学習するためのアプリ
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## usersテーブル
 
-Things you may want to cover:
+| Column           | Type      | Options          |
+| ---------------- | --------- | ---------------- |
+| nick_name        | string    | not null         |
+| email            | string    | not null         |
+| password         | string    | not null         |
+| password_check   | string    | not null         |
+| full_name        | string    | not null         |
+| zenkaku_name     | string    | not null         |
+| birthday         | date      | not null         |
 
-* Ruby version
+## itemsテーブル
 
-* System dependencies
+| Column          | Type          | Options  |
+| --------------- | ------------- | -------- |
+| item_image      | ActiveStorage |          |
+| item_name       | string        | not null |
+| item_concept    | text          | not null |
+| item_category   | string        | not null |
+| item_version    | string        | not null |
+| delivery_fee    | string        | not null |
+| delivery_area   | string        | not null |
+| delivery_day    | string        | not null |
+| item_fee        | string        | not null |
 
-* Configuration
 
-* Database creation
+## ordersテーブル
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+| Column       | Type       | Options  |
+| -----------  | ---------- | -------- |
+| card_number  | string     | not null |
+| card_id      | string     | not null |
+| timestamps   |            |          |
+| post_number  | string     | not null |
+| prefectures  | string     | not null |
+| city         | string     | not null |
+| city_number  | string     | not null |
+| building     | string     | not null |
+| phone_number | interger   | not null |
