@@ -15,6 +15,11 @@ Furima h1
 | last_name_kana   | string    | not null |
 | birthday         | date      | not null |
 
+## Association
+has_many:items
+has_many:orders
+
+
 ## itemsテーブル
 
 | Column          | Type          | Options  |
@@ -28,18 +33,35 @@ Furima h1
 | delivery_area   | string        | not null |
 | delivery_day    | string        | not null |
 | item_fee        | string        | not null |
+| user            | reference     |
+
+## Association
+belongs_to:user
+has_one:order
+
 
 
 ## ordersテーブル
 
 | Column       | Type       | Options  |
 | -----------  | ---------- | -------- |
-| card_number  | string     | not null |
-| card_id      | string     | not null |
-| timestamps   |            |          |
+| user         | reference  | not null |
+| item         | reference  | not null |
+
+## Association
+has_one:item
+has_one:address
+belongs_to:user
+
+
+## postsテーブル
 | post_number  | string     | not null |
 | prefectures  | string     | not null |
 | city         | string     | not null |
 | city_number  | string     | not null |
 | building     | string     | not null |
 | phone_number | string     | not null |
+
+
+## Association
+belongs_to:order
