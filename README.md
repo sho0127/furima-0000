@@ -33,7 +33,7 @@ has_many:orders
 | delivery_area   | string        | not null |
 | delivery_day    | string        | not null |
 | item_fee        | string        | not null |
-| user            | reference     |
+| user            | reference     |          |
 
 ## Association
 belongs_to:user
