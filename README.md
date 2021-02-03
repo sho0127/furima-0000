@@ -3,15 +3,17 @@ Furima h1
 
 ## usersテーブル
 
-| Column           | Type      | Options          |
-| ---------------- | --------- | ---------------- |
-| nick_name        | string    | not null         |
-| email            | string    | not null         |
-| password         | string    | not null         |
-| password_check   | string    | not null         |
-| full_name        | string    | not null         |
-| zenkaku_name     | string    | not null         |
-| birthday         | date      | not null         |
+| Column           | Type      | Options  |
+| ---------------- | --------- | ---------|
+| nick_name        | string    | not null |
+| email            | string    | not null |
+| password         | string    | not null |
+| password_check   | string    | not null |
+| first_name       | string    | not null |
+| last_name        | string    | not null |
+| first_name_kana  | string    | not null |
+| last_name_kana   | string    | not null |
+| birthday         | date      | not null |
 
 ## itemsテーブル
 
@@ -40,4 +42,4 @@ Furima h1
 | city         | string     | not null |
 | city_number  | string     | not null |
 | building     | string     | not null |
-| phone_number | interger   | not null |
+| phone_number | string     | not null |
